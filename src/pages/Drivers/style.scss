@@ -1,0 +1,100 @@
+
+.Sec_Drivers {  
+  max-width: 100%;
+  margin-top: 5%;
+  display: flex;
+
+
+  div {
+     width: 100%;
+     
+     h1{
+      padding-left: 40px;
+      font-size: 55px;
+      font-style: italic;
+      font-weight: bold;
+     }
+
+   ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 100%;
+    margin-top: 5%;
+
+    img{
+      width: 100px;
+    }
+    
+    li{
+       display: flex;
+      width: 300px;
+      height: 310px;
+      border-radius: 10px;
+      gap: 40px;
+
+      div{
+        font-style: italic;
+        p{
+          height: 0 ;
+          color: #fff;
+          
+        }
+
+        .SobreNome{
+          font-weight: bolder;
+        }
+
+        .Number{
+          padding-top: 40px;
+          font-size: 34px;
+        }
+      }
+    }
+   }
+
+  }
+
+}
+
+.Mercedes {
+  background-color: #007560;
+}
+
+.Ferrari{
+  background-color: #710006;
+}
+
+
+.Mclaren{
+  background-color: #F47600;
+}
+
+.RedBull{
+  background-color: #003282;
+}
+
+.Sauber {
+  background-color: #006300;
+}
+
+.Alpine {
+  background-color: #005081;
+}
+
+.Hass {
+  background-color: rgba(77, 80, 82);
+}
+
+.AstonMartin {
+   background-color: #00482C;
+}
+
+.Williams {
+  background-color: #000681;
+}
+
+.RedbullRacing {
+  background-color: #2345AB;
+}

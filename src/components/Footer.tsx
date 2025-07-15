@@ -1,12 +1,12 @@
-import React from "react";
 import "./styles.scss";
+import LogoF1 from '../assets/imgs/LogoF1.png'
 
 const Footer = () => {
   return (
     <footer>
       <img
         className="LogoF1_2"
-        src="https://wallpaperaccess.com/full/2180263.png"
+        src={LogoF1}
         alt=""
       />
       <div className="div_span">

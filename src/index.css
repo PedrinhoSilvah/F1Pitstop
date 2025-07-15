@@ -5,20 +5,9 @@ body {
   font-family: sans-serif;
 }
 
-header {
-  padding: 0 10%;
-  margin-bottom: 5%;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  gap: 80px;
 }
 
 li {
@@ -27,8 +16,6 @@ li {
   font-weight: bold;
   cursor: pointer;
 }
-
-
 
 section {
   padding: 0 10%;
@@ -43,14 +30,14 @@ h1 {
   font-weight: bold;
 }
 
-.Container_Drivers{
+.Container_Drivers {
   display: flex;
   justify-content: center;
   gap: 94px;
   margin-top: 10%;
 }
 
-.DriversIMG{
+.DriversIMG {
   width: 250px;
 }
 
@@ -84,7 +71,9 @@ h1 {
 }
 
 .Text_classification {
+  font-size: 40px;
   padding-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Container {
@@ -93,22 +82,17 @@ h1 {
   font-weight: bolder;
 }
 
-.classification_Drivers {
+.classification_Drivers_Team {
   width: 500px;
-  height: 3050px;
+  height: 1080px;
   box-shadow: 2px 2px 2px 5px #b2bec3;
   border-radius: 5px;
-}
-
-.classification_Team {
-  width: 500px;
-  height: 1500px;
-  box-shadow: 2px 2px 2px 5px #b2bec3;
-  border-radius: 5px;
+  background-color: #1e022efe;
 }
 
 .Name_Classification {
   padding-left: 20px;
+  color: #ffffff;
 }
 
 .Class {
@@ -125,20 +109,20 @@ h1 {
   font-weight: 400;
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid #dfe6e9;
-  border-top: 1px solid #dfe6e9;
 }
 
 .pts {
   padding-right: 24px;
+  color: #ffffff;
 }
 
 .txt {
   display: flex;
   gap: 34px;
+  color: #ffffff;
+  font-weight: bolder;
 }
 
-.capa_f1{
+.capa_f1 {
   margin-top: 10%;
 }
-
