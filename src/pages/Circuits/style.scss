@@ -1,0 +1,52 @@
+.Circuits {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding-left: 40px;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    li {
+      background-color: black;
+
+      .data_gp {
+        background-color: #555;
+        color: #fff;
+        font-style: italic;
+        font-size: 15px;
+        width: 60px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        
+      }
+
+      .img_circuits {
+        width: 350px;
+        height: 250px;
+      }
+      .div_name_gp {
+        background-color: #333333;
+        color: #fff;
+        height: 100px;
+        .name_gp {
+          text-transform: uppercase;
+          padding-top: 50px;
+          padding-left: 20px;
+          font-size: 22px;
+          font-style: italic;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "./style.scss";
-import Imagens from "../../assets/config";
+import Imagens from "../../assets/config/DriversImg";
 
 const Drivers = () => {
   return (
