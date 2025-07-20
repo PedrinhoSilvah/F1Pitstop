@@ -13,7 +13,6 @@ const Header = () => {
         />
         <ul>
           <Link className='Url' to="/">Home</Link>
-          <Link className='Url' to="/Seasons">Corridas</Link>
           <Link className='Url' to="/Drivers">Pilotos</Link>
           <Link className='Url' to="/Team" >Equipes</Link>
           <Link className='Url' to="/Circuits">Circuitos</Link>
