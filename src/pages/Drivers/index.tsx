@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "./style.scss";
 import Imagens from "../../assets/config/DriversImg";
+import Logos from "../../assets/config/Logos";
 
 const Drivers = () => {
   return (
@@ -17,6 +18,9 @@ const Drivers = () => {
                 <p>Lando</p>
                 <p className="SobreNome">Norris</p>
                 <p className="Number">4</p>
+                <div>
+                  <img className="teste" src={Logos.McLaren} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Mclaren">
@@ -25,6 +29,9 @@ const Drivers = () => {
                 <p>Oscar</p>
                 <p className="SobreNome">Piastri</p>
                 <p className="Number">81</p>
+                <div>
+                  <img src={Logos.McLaren} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Ferrari">
@@ -33,6 +40,9 @@ const Drivers = () => {
                 <p>Lewis</p>
                 <p className="SobreNome">Hamilton</p>
                 <p className="Number">44</p>
+                <div>
+                  <img src={Logos.Ferrari} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Ferrari">
@@ -41,6 +51,9 @@ const Drivers = () => {
                 <p>Charles</p>
                 <p className="SobreNome">Leclerc</p>
                 <p className="Number">16</p>
+                <div>
+                  <img src={Logos.Ferrari} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Mercedes">
@@ -49,6 +62,9 @@ const Drivers = () => {
                 <p>George</p>
                 <p className="SobreNome">Russel</p>
                 <p className="Number">63</p>
+                <div>
+                  <img src={Logos.Mercedes} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Mercedes">
@@ -57,6 +73,9 @@ const Drivers = () => {
                 <p>Kimi</p>
                 <p className="SobreNome">Antonelli</p>
                 <p className="Number">12</p>
+                <div>
+                  <img src={Logos.Mercedes} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="RedBull">
@@ -65,6 +84,9 @@ const Drivers = () => {
                 <p>Max</p>
                 <p className="SobreNome">Verstappen</p>
                 <p className="Number">1</p>
+                <div>
+                  <img src={Logos.RedBull} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="RedBull">
@@ -73,6 +95,9 @@ const Drivers = () => {
                 <p>Yuki</p>
                 <p className="SobreNome">Tsunoda</p>
                 <p className="Number">22</p>
+                <div>
+                  <img src={Logos.RedBull} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Sauber">
@@ -81,6 +106,9 @@ const Drivers = () => {
                 <p>Nico</p>
                 <p className="SobreNome">Hulkenberg</p>
                 <p className="Number">27</p>
+                <div>
+                  <img src={Logos.Stake} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Sauber">
@@ -89,6 +117,9 @@ const Drivers = () => {
                 <p>Gabriel</p>
                 <p className="SobreNome">Bortoleto</p>
                 <p className="Number">5</p>
+                <div>
+                  <img src={Logos.Stake} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Alpine">
@@ -97,6 +128,9 @@ const Drivers = () => {
                 <p>Pierre</p>
                 <p className="SobreNome">Gasly</p>
                 <p className="Number">10</p>
+                <div>
+                  <img src={Logos.Alpine} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Alpine">
@@ -105,6 +139,9 @@ const Drivers = () => {
                 <p>Franco</p>
                 <p className="SobreNome">Colapinto</p>
                 <p className="Number">43</p>
+                <div>
+                  <img src={Logos.Alpine} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Hass">
@@ -113,6 +150,9 @@ const Drivers = () => {
                 <p>Esteban</p>
                 <p className="SobreNome">Ocon</p>
                 <p className="Number">31</p>
+                <div>
+                  <img src={Logos.Hass} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Hass">
@@ -121,6 +161,9 @@ const Drivers = () => {
                 <p>Oliver</p>
                 <p className="SobreNome">Bearman</p>
                 <p className="Number">87</p>
+                <div>
+                  <img src={Logos.Hass} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="AstonMartin">
@@ -129,6 +172,9 @@ const Drivers = () => {
                 <p>Fernando</p>
                 <p className="SobreNome">Alonso</p>
                 <p className="Number">14</p>
+                <div>
+                  <img src={Logos.AstonMartin} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="AstonMartin">
@@ -137,6 +183,9 @@ const Drivers = () => {
                 <p>Lance</p>
                 <p className="SobreNome">Stroll</p>
                 <p className="Number">18</p>
+                <div>
+                  <img src={Logos.AstonMartin} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Williams">
@@ -145,6 +194,9 @@ const Drivers = () => {
                 <p>Carlos</p>
                 <p className="SobreNome">Sainz</p>
                 <p className="Number">55</p>
+                <div>
+                  <img src={Logos.Williams} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="Williams">
@@ -153,6 +205,9 @@ const Drivers = () => {
                 <p>Alexander</p>
                 <p className="SobreNome">Albon</p>
                 <p className="Number">23</p>
+                <div>
+                  <img src={Logos.Williams} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="RedbullRacing">
@@ -161,6 +216,9 @@ const Drivers = () => {
                 <p>Liam</p>
                 <p className="SobreNome">Lawson</p>
                 <p className="Number">30</p>
+                <div>
+                  <img src={Logos.RedBullRacing} alt="Logo_Team" />
+                </div>
               </div>
             </li>
             <li className="RedbullRacing">
@@ -169,6 +227,9 @@ const Drivers = () => {
                 <p>Isack</p>
                 <p className="SobreNome">Hadjar</p>
                 <p className="Number">6</p>
+                <div>
+                  <img src={Logos.RedBullRacing} alt="Logo_Team" />
+                </div>
               </div>
             </li>
           </ul>

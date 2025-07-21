@@ -1,76 +1,77 @@
-
-.Sec_Drivers {  
+.Sec_Drivers {
   max-width: 100%;
   margin-top: 5%;
   display: flex;
 
-
   div {
-     width: 100%;
-     
-     h1{
+    width: 100%;
+
+    h1 {
       padding-left: 40px;
       font-style: italic;
       font-weight: bold;
-     }
-
-   ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
-    width: 100%;
-    margin-top: 5%;
-
-    img{
-      width: 100px;
     }
-    
-    li{
-       display: flex;
-      width: 300px;
-      height: 310px;
-      border-radius: 10px;
-      gap: 40px;
 
-      div{
-        font-style: italic;
-        p{
-          height: 0 ;
-          color: #fff;
-          
-        }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 100px;
+      width: 100%;
+      margin-top: 5%;
 
-        .SobreNome{
-          font-weight: bolder;
-        }
+      img {
+        width: 100px;
+      }
 
-        .Number{
-          padding-top: 40px;
-          font-size: 34px;
+      li {
+        display: flex;
+        width: 300px;
+        height: 310px;
+        border-radius: 10px;
+
+        div {
+          font-style: italic;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            height: 0;
+            color: #fff;
+          }
+
+          .SobreNome {
+            font-weight: bolder;
+          }
+
+          .Number {
+            font-style: italic;
+            font-size: 34px;
+          }
+          div{
+            padding-top: 30px;
+          }
         }
       }
     }
-   }
-
   }
-
 }
 
 .Mercedes {
   background-color: #007560;
 }
 
-.Ferrari{
+.Ferrari {
   background-color: #710006;
 }
 
-
-.Mclaren{
-  background-color: #F47600;
+.Mclaren {
+  background-color: #f47600;
 }
 
-.RedBull{
+.RedBull {
   background-color: #003282;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .AstonMartin {
-   background-color: #00482C;
+  background-color: #00482c;
 }
 
 .Williams {
@@ -95,5 +96,5 @@
 }
 
 .RedbullRacing {
-  background-color: #2345AB;
+  background-color: #2345ab;
 }
