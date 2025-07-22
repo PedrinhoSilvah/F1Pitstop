@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     li {
       background-color: black;
+      border-radius: 20px;
 
       .data_gp {
         background-color: #555;
@@ -27,7 +28,6 @@
         border-radius: 20px;
         text-transform: uppercase;
         white-space: nowrap;
-        
       }
 
       .img_circuits {
@@ -38,13 +38,18 @@
         background-color: #333333;
         color: #fff;
         height: 100px;
+        border-radius: 20px;
         .name_gp {
           text-transform: uppercase;
-          padding-top: 50px;
           padding-left: 20px;
           font-size: 22px;
           font-style: italic;
           font-weight: bolder;
+        }
+        .Flags {
+          width: 21px;
+          padding-left: 20px;
+          padding-top: 10px;
         }
       }
     }

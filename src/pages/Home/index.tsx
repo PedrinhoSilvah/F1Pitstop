@@ -40,7 +40,7 @@ function Home() {
   }, []);
 
   if (erro) return <p>{erro}</p>;
-  if (!corrida) return null
+  if (!corrida) return null;
 
   const proximaCorrida = corrida.race[0];
   return (
