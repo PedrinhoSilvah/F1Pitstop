@@ -1,0 +1,43 @@
+.Section_Team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .Ul_Container_Team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+
+    .container_Team {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      width: 400px;
+      height: 300px;
+      align-items: center;
+      .Logos_Team {
+        width: 100px;
+      }
+      .Logos_Team_Config {
+        width: 80px;
+      }
+      .Img_Cars {
+        padding-top: 40px;
+        width: 300px;
+      }
+
+      .Text_Team{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+      h2 {
+        font-size: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        text-align: center;
+        color: aliceblue;
+      }
+    }
+  }
+}
