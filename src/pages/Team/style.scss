@@ -1,7 +1,11 @@
 .Section_Team {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+
+ .H1_Team{
+   padding-left: 40px;
+ }
+
   .Ul_Container_Team {
     display: flex;
     flex-wrap: wrap;

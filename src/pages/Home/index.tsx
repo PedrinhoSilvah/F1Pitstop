@@ -11,6 +11,7 @@ import {
 import "../../index.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import AutoSlider from "../../Slides/Slides";
 
 function Home() {
   const [corrida, setCorrida] = useState<NextRace | null>(null);
@@ -49,16 +50,9 @@ function Home() {
 
       <section>
         <div className="NextGP">
-          <h1>PRÓXIMA CORRIDA</h1>
+          <h1 className="NextH1">PRÓXIMA CORRIDA</h1>
           <h1>GP DA {proximaCorrida?.circuit.country} </h1>
           <p className="data_race">{proximaCorrida?.schedule.race.date}</p>
-        </div>
-        <div>
-          <img
-            className="F1CAR"
-            src="https://motorshow.com.br/wp-content/uploads/sites/2/2023/07/si202307020345-hires-jpeg-24bit-rgb-scaled-e1688570841111.jpg"
-            alt="F1_carros"
-          />
         </div>
       </section>
       <div className="Container_Drivers">
@@ -83,8 +77,31 @@ function Home() {
           alt=""
         />
       </div>
+      <div
+        style={{
+          display: "grid",
+          placeItems: "center",
+          paddingTop: 100,
+        }}
+      >
+        <AutoSlider
+          images={[
+            "https://media.formula1.com/image/upload/t_16by9North/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_3/2202523504.webp",
+            "https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_2/2202231035.webp",
+            "https://media.formula1.com/image/upload/t_16by9South/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_3/2202499870.webp",
+            "https://media.formula1.com/image/upload/t_16by9North/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_2/2202231034.webp",
+            "https://media.formula1.com/image/upload/t_16by9South/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_3/2202532072.webp",
+          ]}
+          interval={3000}
+        />
+      </div>
+      <h2 className="Classification_H2">Classificação Drivers & Teams</h2>
       <section className="classification">
-        <h2 className="Text_classification">Classificação da temporada</h2>
+        <img
+          className="FIMG"
+          src="https://media.formula1.com/image/upload/c_lfill,w_960,h_540/q_auto/v1740000000/fom-website/campaign/support-f1/F1%20TV/TV-Onboard-Norris_KzhPfjQ_1920x1080_eDQPcX6%201.webp"
+          alt=""
+        />
         <div className="Container">
           <div className="classification_Drivers_Team">
             <h2 className="Name_Classification">Classificação Pilotos</h2>
@@ -119,13 +136,25 @@ function Home() {
             </div>
           </div>
         </div>
-
-        <img
-          className="capa_f1"
-          src="https://f1store.formula1.com/content/ws/all/14875240-b5b2-4feb-a035-d15d289a147b__1600X600.gif"
-          alt=""
-        />
       </section>
+      <div
+        style={{
+          display: "grid",
+          placeItems: "center",
+        }}
+      >
+        <AutoSlider
+          images={[
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Hamilton.webp",
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Verstappen.webp",
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Piastri.webp",
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Leclerc.webp",
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Norris.webp",
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Bortoleto.webp"
+          ]}
+          interval={3000}
+        />
+      </div>
       <Footer />
     </div>
   );

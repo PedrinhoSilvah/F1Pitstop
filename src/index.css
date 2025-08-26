@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-align: center;
 }
 
 nav {
@@ -20,14 +21,11 @@ li {
 section {
   padding: 0 10%;
   display: flex;
-  gap: 5%;
   justify-content: center;
 }
 
 h1 {
   text-transform: uppercase;
-  font-size: 27px;
-  font-weight: bold;
 }
 
 .Container_Drivers {
@@ -59,44 +57,88 @@ h1 {
 }
 
 .NextGP {
+  width: 1000px;
+  height: 600px;
   padding-top: 40px;
-}
-
-.classification {
-  margin-top: 10%;
-  text-transform: uppercase;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://motorshow.com.br/wp-content/uploads/sites/2/2023/07/si202307020345-hires-jpeg-24bit-rgb-scaled-e1688570841111.jpg")
+      center / cover no-repeat;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 0.2;
 }
 
-.Text_classification {
-  font-size: 40px;
-  padding-bottom: 50px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.NextH1 {
+  font-size: 36px;
+  padding-top: 10%;
+}
+
+.Classification_H2{
+  padding-top: 5%;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  
+}
+
+.classification {
+  height: 100%;
+  max-height: 800px;
+  margin-top: 10%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  margin-bottom: 20%;
+}
+
+.FIMG {
+  width: 1000px;
+  height: 800px;
+  border-radius: 20px;
 }
 
 .Container {
+  height: 800px;
   display: flex;
-  gap: 94px;
+  flex-direction: column;
   font-weight: bolder;
+  gap: 50px;
+  overflow-y: auto;
+}
+
+.Container::-webkit-scrollbar {
+  display: none;
 }
 
 .classification_Drivers_Team {
-  width: 500px;
-  height: 1080px;
-  box-shadow: 2px 2px 2px 5px #b2bec3;
-  border-radius: 5px;
-  background-color: #2e2e32;
+  width: 100%;
+  height: 1550px;
+  box-shadow: 2px 2px 2px 5px #1e1f26;
+  border-radius: 20px;
+  background-color: #1e1f26;
+  text-align: center;
 }
 
 .Name_Classification {
   padding-left: 20px;
   color: #ffffff;
+  height: 10%;
+  border-bottom: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 
 .Class {
-  padding-top: 50px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: self-start;
@@ -105,8 +147,9 @@ h1 {
 .tes {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 11px;
+  font-weight: 500;
+  color: #e5e5e5;
   width: 100%;
   height: 60px;
 }
@@ -114,6 +157,7 @@ h1 {
 .pts {
   padding-right: 24px;
   color: #ffffff;
+  font-weight: 400;
 }
 
 .txt {

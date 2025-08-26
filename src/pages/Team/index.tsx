@@ -4,12 +4,12 @@ import Cars from "../../assets/config/Team";
 import Logos from "../../assets/config/Logos";
 import "./style.scss";
 
-
 const Team = () => {
   return (
     <>
       <Header />
       <section className="Section_Team">
+        <h1 className="H1_Team">F1 TEAM</h1>
         <ul className="Ul_Container_Team">
           <li className="container_Team Mclaren">
             <img className="Img_Cars" src={Cars.McLaren} alt="Img_Team" />
