@@ -1,6 +1,6 @@
 import './styles.scss'
 import { Link } from "react-router-dom";
-import LogoF1 from '../assets/imgs/LogoF1.png'
+import LogoF1 from '../assets/imgs/LogoF1-removebg-preview.png'
 
 const Header = () => {
   return (

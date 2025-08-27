@@ -1,5 +1,5 @@
 import "./styles.scss";
-import LogoF1 from '../assets/imgs/LogoF1.png'
+import LogoF1 from '../assets/imgs/LogoF1-removebg-preview.png'
 
 const Footer = () => {
   return (

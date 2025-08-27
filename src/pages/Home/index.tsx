@@ -12,6 +12,11 @@ import "../../index.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import AutoSlider from "../../Slides/Slides";
+import FrontLando from "../../assets/imgs/LANDO.jpg"
+import FrontMax from "../../assets/imgs/MAX.png"
+import FrontRussel from "../../assets/imgs/RUSSEL.jpg"
+import FrontPiastri from "../../assets/imgs/PIASTRI.jpg"
+
 
 function Home() {
   const [corrida, setCorrida] = useState<NextRace | null>(null);
@@ -48,7 +53,7 @@ function Home() {
     <div className="App">
       <Header />
 
-      <section>
+      <section >
         <div className="NextGP">
           <h1 className="NextH1">PRÓXIMA CORRIDA</h1>
           <h1>GP DA {proximaCorrida?.circuit.country} </h1>
@@ -58,23 +63,23 @@ function Home() {
       <div className="Container_Drivers">
         <img
           className="DriversIMG"
-          src="https://f1store.formula1.com/content/ws/all/acef5fb9-16e7-45b0-97ef-fab597de1ab3__800X1290.png?w=800"
-          alt=""
+          src={FrontLando}
+          alt="Imagem_PIloto"
         />
         <img
           className="DriversIMG"
-          src="https://f1store.formula1.com/content/ws/all/e6e6bb59-1560-47d0-a8dc-f7b00066afb2__800X1290.png?w=800"
-          alt=""
+          src={FrontMax}
+          alt="Imagem_PIloto"
         />
         <img
           className="DriversIMG"
-          src="https://f1store.formula1.com/content/ws/all/db233ec5-2ec4-45e6-839b-8b34fe1f41f0__800X1290.png?w=800"
-          alt=""
+          src={FrontRussel}
+          alt="Imagem_PIloto"
         />
         <img
           className="DriversIMG"
-          src="https://f1store.formula1.com/content/ws/all/13162d73-eb0b-48b6-8276-52dda0f83ca0__800X1290.png?w=800"
-          alt=""
+          src={FrontPiastri}
+          alt="Imagem_PIloto"
         />
       </div>
       <div

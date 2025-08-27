@@ -4,6 +4,9 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
   text-align: center;
+  background-color: #15151e;
+  color: #DCDDDE;
+ 
 }
 
 nav {
@@ -37,6 +40,7 @@ h1 {
 
 .DriversIMG {
   width: 250px;
+  border-radius: 20px;
 }
 
 .F1CAR {
@@ -124,6 +128,7 @@ h1 {
   border-radius: 20px;
   background-color: #1e1f26;
   text-align: center;
+  
 }
 
 .Name_Classification {
