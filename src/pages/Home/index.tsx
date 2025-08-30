@@ -12,17 +12,38 @@ import "../../index.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import AutoSlider from "../../Slides/Slides";
-import FrontLando from "../../assets/imgs/LANDO.jpg"
-import FrontMax from "../../assets/imgs/MAX.png"
-import FrontRussel from "../../assets/imgs/RUSSEL.jpg"
-import FrontPiastri from "../../assets/imgs/PIASTRI.jpg"
+import FrontLando from "../../assets/imgs/LANDO.jpg";
+import FrontMax from "../../assets/imgs/MAX.png";
+import FrontRussel from "../../assets/imgs/RUSSEL.jpg";
+import FrontPiastri from "../../assets/imgs/PIASTRI.jpg";
+import styled, { keyframes } from "styled-components";
 
+// Animação: carro atravessa a tela da direita para a esquerda
+const drive = keyframes`
+  0% { transform: translateX(150%); }
+  100% { transform: translateX(-150%); }
+`;
+
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+`;
+
+const Car = styled.div`
+  font-size: 3rem;
+  animation: ${drive} 4s linear infinite;
+`;
 
 function Home() {
   const [corrida, setCorrida] = useState<NextRace | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [drivers, setDrivers] = useState<DriverChampionship[]>([]);
   const [constructors, setConstructors] = useState<ConstructorStanding[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function carregar() {
@@ -34,11 +55,16 @@ function Home() {
             getConstructorsChampionship(),
           ]);
 
-        setCorrida(dadosCorrida);
-        setDrivers(dadosDrivers);
-        setConstructors(dadosConstructors);
+        // Delay de 2 segundos
+        setTimeout(() => {
+          setCorrida(dadosCorrida);
+          setDrivers(dadosDrivers);
+          setConstructors(dadosConstructors);
+          setLoading(false); // esconde loader
+        }, 2000);
       } catch (err) {
         setErro("Erro ao carregar dados da temporada.");
+        setLoading(false);
       }
     }
 
@@ -46,14 +72,19 @@ function Home() {
   }, []);
 
   if (erro) return <p>{erro}</p>;
-  if (!corrida) return null;
+  if (!corrida)
+    return (
+      <LoaderWrapper>
+        <Car>🏎️</Car>
+      </LoaderWrapper>
+    );
 
   const proximaCorrida = corrida.race[0];
   return (
     <div className="App">
       <Header />
 
-      <section >
+      <section>
         <div className="NextGP">
           <h1 className="NextH1">PRÓXIMA CORRIDA</h1>
           <h1>GP DA {proximaCorrida?.circuit.country} </h1>
@@ -61,26 +92,10 @@ function Home() {
         </div>
       </section>
       <div className="Container_Drivers">
-        <img
-          className="DriversIMG"
-          src={FrontLando}
-          alt="Imagem_PIloto"
-        />
-        <img
-          className="DriversIMG"
-          src={FrontMax}
-          alt="Imagem_PIloto"
-        />
-        <img
-          className="DriversIMG"
-          src={FrontRussel}
-          alt="Imagem_PIloto"
-        />
-        <img
-          className="DriversIMG"
-          src={FrontPiastri}
-          alt="Imagem_PIloto"
-        />
+        <img className="DriversIMG" src={FrontLando} alt="Imagem_PIloto" />
+        <img className="DriversIMG" src={FrontMax} alt="Imagem_PIloto" />
+        <img className="DriversIMG" src={FrontRussel} alt="Imagem_PIloto" />
+        <img className="DriversIMG" src={FrontPiastri} alt="Imagem_PIloto" />
       </div>
       <div
         style={{
@@ -155,7 +170,7 @@ function Home() {
             "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Piastri.webp",
             "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Leclerc.webp",
             "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Norris.webp",
-            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Bortoleto.webp"
+            "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/fom-website/manual/Misc/Driver%20Of%20The%20Day/2025/DOTD2025%20-%20Bortoleto.webp",
           ]}
           interval={3000}
         />
