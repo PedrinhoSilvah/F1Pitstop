@@ -2,11 +2,23 @@ header {
   padding: 0 10%;
   margin-bottom: 5%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  
-  
+
+  @media (max-width: 530px) {
+    padding: 0 0;
+  }
+
+  .navbar1 {
+    @media (max-width: 890px) {
+      display: none;
+    }
+  }
 
   .LogoF1 {
     width: 150px;
+
+    @media (max-width: 530px) {
+      width: 100px;
+    }
   }
 
   ul {
@@ -31,9 +43,18 @@ footer {
   display: flex;
   align-items: center;
 
+   @media (max-width: 890px){
+    height: 150px;
+   }
+
   .LogoF1_2 {
     width: 150px;
     padding-left: 70px;
+
+    @media (max-width: 530px) {
+      width: 100px;
+      padding-left: 10px;
+    }
   }
 
   .div_span {
@@ -42,11 +63,89 @@ footer {
     flex-direction: column;
     gap: 2px;
 
+     @media (max-width: 890px){
+      width: 90%;
+      gap: 3px;
+     }
+
     span {
       color: red;
       background-color: red;
       width: 50%;
       margin-left: 40px;
+
+       @media (max-width: 890px){
+        margin-left: 10px;
+        width: 90%;
+        height: 10px;
+       }
     }
+  }
+
+  .Text-footer{
+     @media (max-width: 890px) {
+      display: none;
+      
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 890px) {
+  .navbar {
+    display: block;
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1e1f26;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 }

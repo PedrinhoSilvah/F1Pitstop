@@ -10,6 +10,11 @@ const Box = styled.div`
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 16px;
+
+  @media (max-width: 890px){
+    max-width: 340px;
+    height: 200px;
+  }
 `;
 const Slide = styled.img<{ $active: boolean }>`
   position: absolute;

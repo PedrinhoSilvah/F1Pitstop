@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   getProximaCorrida,
@@ -45,6 +45,10 @@ function Home() {
   const [constructors, setConstructors] = useState<ConstructorStanding[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const [activeTab, setActiveTab] = useState<"drivers" | "constructors">(
+    "drivers"
+  );
+
   useEffect(() => {
     async function carregar() {
       try {
@@ -55,13 +59,10 @@ function Home() {
             getConstructorsChampionship(),
           ]);
 
-        // Delay de 2 segundos
-        setTimeout(() => {
-          setCorrida(dadosCorrida);
-          setDrivers(dadosDrivers);
-          setConstructors(dadosConstructors);
-          setLoading(false); // esconde loader
-        }, 2000);
+        setCorrida(dadosCorrida);
+        setDrivers(dadosDrivers);
+        setConstructors(dadosConstructors);
+        setLoading(false); // esconde loader
       } catch (err) {
         setErro("Erro ao carregar dados da temporada.");
         setLoading(false);
@@ -72,38 +73,35 @@ function Home() {
   }, []);
 
   if (erro) return <p>{erro}</p>;
-  if (!corrida)
+  if (loading)
     return (
       <LoaderWrapper>
         <Car>🏎️</Car>
       </LoaderWrapper>
     );
 
-  const proximaCorrida = corrida.race[0];
+  const proximaCorrida = corrida?.race[0];
   return (
     <div className="App">
       <Header />
 
       <section>
+        {/* Próxima Corrida */}
         <div className="NextGP">
           <h1 className="NextH1">PRÓXIMA CORRIDA</h1>
           <h1>GP DA {proximaCorrida?.circuit.country} </h1>
           <p className="data_race">{proximaCorrida?.schedule.race.date}</p>
         </div>
       </section>
+      {/* Pilotos em destaque */}
       <div className="Container_Drivers">
         <img className="DriversIMG" src={FrontLando} alt="Imagem_PIloto" />
         <img className="DriversIMG" src={FrontMax} alt="Imagem_PIloto" />
         <img className="DriversIMG" src={FrontRussel} alt="Imagem_PIloto" />
         <img className="DriversIMG" src={FrontPiastri} alt="Imagem_PIloto" />
       </div>
-      <div
-        style={{
-          display: "grid",
-          placeItems: "center",
-          paddingTop: 100,
-        }}
-      >
+      {/* Slider */}
+      <div className="Top">
         <AutoSlider
           images={[
             "https://media.formula1.com/image/upload/t_16by9North/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_3/2202523504.webp",
@@ -116,47 +114,70 @@ function Home() {
         />
       </div>
       <h2 className="Classification_H2">Classificação Drivers & Teams</h2>
-      <section className="classification">
+
+      <section className="classification mobile-only">
         <img
           className="FIMG"
           src="https://media.formula1.com/image/upload/c_lfill,w_960,h_540/q_auto/v1740000000/fom-website/campaign/support-f1/F1%20TV/TV-Onboard-Norris_KzhPfjQ_1920x1080_eDQPcX6%201.webp"
           alt=""
         />
+
         <div className="Container">
-          <div className="classification_Drivers_Team">
-            <h2 className="Name_Classification">Classificação Pilotos</h2>
-            <div>
-              <ul className="Class">
-                {drivers.map((driver) => (
-                  <li className="tes" key={driver.classificationId}>
-                    <div className="txt">
-                      {" "}
-                      <p>{driver.position}</p> <p>{driver.driverId}</p>{" "}
-                    </div>{" "}
-                    <p className="pts">{driver.points} pts </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Botões mobile */}
+          <div className="mobile-buttons">
+            <button
+              className={activeTab === "drivers" ? "active" : ""}
+              onClick={() => setActiveTab("drivers")}
+            >
+              Drivers
+            </button>
+            <button
+              className={activeTab === "constructors" ? "active" : ""}
+              onClick={() => setActiveTab("constructors")}
+            >
+              Teams
+            </button>
           </div>
-          <div className="classification_Drivers_Team">
-            <h2 className="Name_Classification">Classificação Constructores</h2>
-            <div>
-              <ul className="Class">
-                {constructors.map((team) => (
-                  <li className="tes" key={team.classificationId}>
-                    <div className="txt">
-                      {" "}
-                      <p>{team.position}</p> <p>{team.teamId}</p>{" "}
-                    </div>{" "}
-                    <p className="pts">{team.points} pts </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Classificação Mobile */}
+          <div
+            className={`classification_Drivers_Team drivers ${
+              activeTab === "drivers" ? "show" : "hide"
+            }`}
+          >
+            <h2 className="Name_Classification">Classificação Pilotos</h2>
+            <ul className="Class">
+              {drivers.map((driver) => (
+                <li className="tes" key={driver.classificationId}>
+                  <div className="txt">
+                    <p>{driver.position}</p>
+                    <p>{driver.driverId}</p>
+                  </div>
+                  <p className="pts">{driver.points} pts</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            className={`classification_Drivers_Team constructors ${
+              activeTab === "constructors" ? "show" : "hide"
+            }`}
+          >
+            <h2 className="Name_Classification">Classificação Construtores</h2>
+            <ul className="Class">
+              {constructors.map((team) => (
+                <li className="tes" key={team.classificationId}>
+                  <div className="txt">
+                    <p>{team.position}</p>
+                    <p>{team.teamId}</p>
+                  </div>
+                  <p className="pts">{team.points} pts</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
+      {/* Slider */}
       <div
         style={{
           display: "grid",

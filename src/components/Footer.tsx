@@ -13,7 +13,7 @@ const Footer = () => {
         <span>.</span>
         <span>.</span>
       </div>
-      <p>© 2003-2025 Formula One World Championship Limited</p>
+      <p  className="Text-footer">© 2003-2025 Formula One World Championship Limited</p>
     </footer>
   );
 };
