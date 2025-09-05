@@ -9,8 +9,8 @@ const Drivers = () => {
     <>
       <Header />
       <section className="Sec_Drivers">
+        <h1 className="Text_Drivers">F1 DRIVERS</h1>
         <div>
-          <h1 className="Text_Drivers">F1 DRIVERS</h1>
           <ul>
             <li className="Mclaren">
               <img src={Imagens.Lando} alt="Img_driver" />

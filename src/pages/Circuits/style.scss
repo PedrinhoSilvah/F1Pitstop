@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  justify-content: center;
+
+  @media (max-width: 1027px) {
+  }
 
   @media (max-width: 768px) {
     padding: 0;
@@ -9,19 +13,25 @@
   }
 
   h1 {
-    padding-left: 40px;
-
-    @media (max-width: 768px) {
-      padding-left: 0;
+    @media (max-width: 1202px) {
+      text-align: center;
     }
+
   }
   ul {
     width: 100%;
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    padding: 0;
+
+    @media (max-width: 1239px) {
+      justify-content: center;
+      gap: 100px;
+    }
 
     @media (max-width: 768px) {
+      width: 100%;
       gap: 20px;
       padding: 0;
       justify-content: center;
@@ -29,6 +39,14 @@
     li {
       background-color: black;
       border-radius: 20px;
+
+      @media (max-width: 1427px) {
+        width: 300px;
+      }
+
+      @media (max-width: 1239px) {
+        width: 250px;
+      }
 
       @media (max-width: 768px) {
         width: 150px;
@@ -58,6 +76,15 @@
         width: 350px;
         height: 250px;
 
+        @media (max-width: 1427px) {
+          width: 300px;
+        }
+
+        @media (max-width: 1239px) {
+          width: 250px;
+          height: 150px;
+        }
+
         @media (max-width: 768px) {
           width: 150px;
           height: 100px;
@@ -74,6 +101,15 @@
           font-size: 22px;
           font-style: italic;
           font-weight: bolder;
+
+          @media (max-width: 1427px) {
+            font-size: 19px;
+          }
+
+          @media (max-width: 1239px) {
+            font-size: 17px;
+          }
+
           @media (max-width: 768px) {
             font-size: 12px;
             padding-left: 5;

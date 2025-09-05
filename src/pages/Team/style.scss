@@ -1,28 +1,34 @@
 .Section_Team {
+  width: 85%;
   display: flex;
   flex-direction: column;
   text-align: start;
 
-   @media (max-width: 768px) {
-    padding: 0;
-    text-align: center;
-  }
-
- .H1_Team{
-   padding-left: 40px;
- }
+   @media (max-width: 1369px) {
+     text-align: center;
+    }
 
   .Ul_Container_Team {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
-
-    
-  @media (max-width: 768px) {
     padding: 0;
-    justify-content: center;
-    gap: 50px;
-  }
+
+    @media (max-width: 1669px) {
+      padding: 0;
+      gap: 50px;
+    }
+
+    @media (max-width: 1369px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0;
+      justify-content: center;
+      gap: 50px;
+    }
 
     .container_Team {
       display: flex;
@@ -31,15 +37,26 @@
       width: 400px;
       height: 300px;
       align-items: center;
-       
-      
-  @media (max-width: 768px) {
-     width: 350px;
-     height: 270px;
-  }
+
+      @media (max-width: 1669px) {
+        width: 350px;
+      }
+
+      @media (max-width: 1369px) {
+        width: 300px;
+      }
+
+      // @media (max-width: 1367px) {
+
+      //   height: 270px;
+      // }
 
       .Logos_Team {
         width: 100px;
+
+        @media (max-width: 1369px) {
+            width: 80px;
+        }
       }
       .Logos_Team_Config {
         width: 80px;
@@ -47,9 +64,13 @@
       .Img_Cars {
         padding-top: 40px;
         width: 300px;
+
+         @media (max-width: 1369px) {
+            width: 250px;
+        }
       }
 
-      .Text_Team{
+      .Text_Team {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -58,6 +79,9 @@
       h2 {
         font-size: 17px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         @media (max-width: 1369px) {
+           font-size: 14px;
+        }
 
         text-align: center;
         color: aliceblue;
